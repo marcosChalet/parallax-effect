@@ -16,9 +16,10 @@ function parallax() {
 }
 
 function moveMoon(valorScroll) {
-  if (valorScroll < 276) {
-    const moveDown = 50 + valorScroll
-    const moveEsq = 200 - valorScroll / 2
+  const moveDown = 50 + valorScroll
+
+  if (moveDown < 550) {
+    const moveEsq = 300 - valorScroll / 2
     moon.style.top = `${moveDown}px`
     moon.style.left = `${moveEsq}px`
   }
@@ -32,8 +33,8 @@ function moveMeteor(valorScroll) {
 }
 
 function moveHarth(valorScroll) {
-  if (valorScroll < 140) {
-    const moveBottom = 150 - valorScroll
+  const moveBottom = 300 - valorScroll
+  if (moveBottom > 0) {
     console.log(valorScroll)
     terra.style.bottom = `${moveBottom}px`
   }
