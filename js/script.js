@@ -33,7 +33,7 @@ function moveMeteor(valorScroll) {
 }
 
 function moveHarth(valorScroll) {
-  const moveBottom = 300 - valorScroll
+  const moveBottom = 300 - valorScroll / 2
   if (moveBottom > 0) {
     console.log(valorScroll)
     terra.style.bottom = `${moveBottom}px`
