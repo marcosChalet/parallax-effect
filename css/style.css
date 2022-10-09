@@ -3,13 +3,13 @@
 :root {
    --bg-color: #07030d;
    --bg-background: linear-gradient(#2b1055, #7597de);
-   --light-color: #aaa;
+   --light-color: #ddd;
    --black: #000;
    --border: solid 1px #fff;
 }
 
 * {
-   box-model: border-box;
+   box-sizing: border-box;
    margin: 0;
    padding: 0;
 }
@@ -33,7 +33,6 @@ a {
    width: 1140px;
    margin: auto;
    font-size: 18px;
-   /* border: var(--border); */
 }
 
 header {
@@ -43,7 +42,6 @@ header {
    text-transform: uppercase;
    height: 70px;
    width: 100vw;
-   /* position: absolute; */
    position: fixed;
    transition: 1s;
    z-index: 1;
@@ -51,7 +49,6 @@ header {
 
 header nav {
    height: 70px;
-   /* position: absolute; */
    position: fixed;
    z-index: 100;
    display: flex;
@@ -98,20 +95,10 @@ header a {
    font-weight: 700;
 }
 
-section img {
-   width: 100%;
-   height: 100%;
-   position: absolute;
-   object-fit: cover;
-   z-index: -1;
-}
-
 section {
    position: relative;
    width: 100vw;
-   /* min-height: 100vh; */
    min-height: 600px;
-
    display: flex;
    align-items: center;
 }
@@ -128,12 +115,68 @@ section {
 .home h1 {
    margin: auto;
    font-size: 4em;
+  position: relative;
 }
 
-.sobre {
-
+.home img.bg {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   object-fit: cover;
+   z-index: -10;
 }
 
-.contato {
-
+.home img.sky {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  object-fit: cover;
+  z-index: -15;
 }
+
+.home img.moon {
+  position: absolute;
+  top: 50px;
+  left: 200px;
+  width: 180px;
+  height: 180px;
+  z-index: -7;
+}
+
+.home img.meteor {
+  position: absolute;
+  top: 200px;
+  left: 800px;
+  width: 150px;
+  height: 200px;
+  z-index: 3;
+  transform: rotateX(140deg);
+}
+
+.home img.lmountain {
+  position: absolute;
+  left: 0px;
+  top: -100px;
+  width: 850px;
+  height: 900px;
+  z-index: -1;
+}
+
+.home img.midMountain {
+  position: absolute;
+  z-index: -11;
+  bottom: 120px;
+  height: 300px;
+  right: 0;
+}
+
+.home img.harth {
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  left: calc(50vw - 100px);
+  bottom: 150px;
+  z-index: -12;
+}
+

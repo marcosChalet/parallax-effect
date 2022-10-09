@@ -1,0 +1,18 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 800" width="1800" height="800">
+	<title>1876-ai</title>
+	<defs>
+		<linearGradient id="g1" x1="-4" y1="617.3" x2="-4" y2="0" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#009bbd"/>
+			<stop offset=".5" stop-color="#4c009f"/>
+			<stop offset="1" stop-color="#19002a"/>
+		</linearGradient>
+	</defs>
+	<style>
+		.s0 { fill: url(#g1) } 
+	</style>
+	<g id="space">
+		<g id="&lt;Clip Group&gt;">
+			<path id="&lt;Path&gt;" class="s0" d="m1800 617.3h-1800v-617.3h1800z"/>
+		</g>
+	</g>
+</svg>

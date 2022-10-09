@@ -1,41 +1,77 @@
 const menu = document.querySelectorAll('.menu li')
 const logo = document.querySelector('.logo')
 
-window.onscroll = function() {scrollHeader()};
+const moon = document.querySelector('.moon')
+const meteor = document.querySelector('.meteor')
+const terra = document.querySelector('.harth')
+
+window.onscroll = function() { scrollHeader() };
+window.addEventListener('scroll', parallax)
+
+function parallax() {
+  let valorScroll = window.scrollY
+  moveMoon(valorScroll)
+  moveMeteor(valorScroll)
+  moveHarth(valorScroll)
+}
+
+function moveMoon(valorScroll) {
+  if (valorScroll < 276) {
+    const moveDown = 50 + valorScroll
+    const moveEsq = 200 - valorScroll / 2
+    moon.style.top = `${moveDown}px`
+    moon.style.left = `${moveEsq}px`
+  }
+}
+
+function moveMeteor(valorScroll) {
+  const moveEsq = 800 - valorScroll
+  const moveTop = 200 - (valorScroll / 200)
+  meteor.style.top = `${moveTop}px`
+  meteor.style.left = `${moveEsq}px`
+}
+
+function moveHarth(valorScroll) {
+  if (valorScroll < 140) {
+    const moveBottom = 150 - valorScroll
+    console.log(valorScroll)
+    terra.style.bottom = `${moveBottom}px`
+  }
+}
 
 menu.forEach(item => {
-   item.addEventListener('click', () => {
-      swapItem(item)
-   });
+  item.addEventListener('click', () => {
+    swapItem(item)
+  });
 })
 
 logo.addEventListener('click', () => {
-   const home = document.querySelector('.menu li')
-   swapItem(home)
+  const home = document.querySelector('.menu li')
+  swapItem(home)
 })
 
 
 
 function scrollHeader() {
-   if (document.body.scrollTop > 130 || document.documentElement.scrollTop > 130) {
-      document.getElementById("header").style.backgroundColor = "#000";
-   } else {
-      document.getElementById("header").style.backgroundColor = "#0000";
+  if (document.body.scrollTop > 130 || document.documentElement.scrollTop > 500) {
+    document.getElementById("header").style.backgroundColor = "#000";
+  } else {
+    document.getElementById("header").style.backgroundColor = "#0000";
   }
 }
 
 
 function swapItem(item) {
-   removeSelecao()
-   adicionaNovaSelecao(item)
+  removeSelecao()
+  adicionaNovaSelecao(item)
 }
 
 function removeSelecao() {
-   menu.forEach(item => {
-      item.classList.remove('selecionado')
-   })
+  menu.forEach(item => {
+    item.classList.remove('selecionado')
+  })
 }
 
 function adicionaNovaSelecao(item) {
-   item.classList.add('selecionado')
+  item.classList.add('selecionado')
 }
