@@ -3,7 +3,7 @@ const logo = document.querySelector('.logo')
 
 const moon = document.querySelector('.moon')
 const meteor = document.querySelector('.meteor')
-const terra = document.querySelector('.harth')
+const terra = document.querySelector('.earth')
 
 window.onscroll = function() { scrollHeader() };
 window.addEventListener('scroll', parallax)
