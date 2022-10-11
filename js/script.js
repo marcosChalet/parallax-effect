@@ -26,8 +26,8 @@ function moveMoon(valorScroll) {
 }
 
 function moveMeteor(valorScroll) {
-  const moveEsq = 800 - valorScroll
-  const moveTop = 200 - (valorScroll / 200)
+  const moveEsq = 900 - valorScroll
+  const moveTop = 300 - valorScroll / 2
   meteor.style.top = `${moveTop}px`
   meteor.style.left = `${moveEsq}px`
 }
