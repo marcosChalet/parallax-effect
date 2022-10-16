@@ -173,6 +173,7 @@ section.home {
   left: 0px;
   bottom: 0;
   height: 400px;
+  width: 100%;
   z-index: -1;
 }
 
