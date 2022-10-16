@@ -30,7 +30,8 @@ a {
 }
 
 .container {
-  width: 1140px;
+  max-width: 100%;
+  width: 100%;
   margin: auto;
   font-size: 18px;
 }
@@ -127,6 +128,7 @@ section.home {
 
 .home img.bg {
   width: 100vw;
+  height: 100%;
   position: absolute;
   object-fit: cover;
   z-index: -10;
@@ -143,6 +145,7 @@ section.home {
 }
 
 .home img.moon {
+  display: none;
   position: absolute;
   object-fit: cover;
   top: 50px;
@@ -156,7 +159,7 @@ section.home {
   position: absolute;
   object-fit: cover;
   top: 300px;
-  left: 900px;
+  right: 900px;
   width: 150px;
   height: 200px;
   z-index: 3;
@@ -191,3 +194,45 @@ section.home {
   z-index: -12;
 }
 
+.container p {
+  text-align: center;
+}
+
+header .menu {
+  display: none;
+}
+
+.container {
+  padding: 20px;
+}
+
+@media(min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media(min-width: 768px) {
+ .container {
+    max-width: 720px;
+  }
+
+  header .menu {
+    display: flex;
+  }
+}
+
+@media(min-width: 992px) {
+ .container {
+    max-width: 960px;
+  }
+  .home img.moon {
+    display: block;
+  }
+}
+
+@media(min-width: 1200px) {
+ .container {
+    max-width: 1140px;
+  }
+}
