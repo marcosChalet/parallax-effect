@@ -156,10 +156,11 @@ section.home {
 }
 
 .home img.meteor {
+  display: none;
   position: absolute;
   object-fit: cover;
   top: 300px;
-  right: 900px;
+  right: 300px;
   width: 150px;
   height: 200px;
   z-index: 3;
@@ -216,10 +217,13 @@ header .menu {
  .container {
     max-width: 720px;
   }
-
   header .menu {
     display: flex;
   }
+  .home img.meteor {
+    display: block;
+  }
+
 }
 
 @media(min-width: 992px) {
